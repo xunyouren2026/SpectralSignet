@@ -1,0 +1,30 @@
+Tue Sep  8 18:11:44 2026    C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\A01_model\logs\profile\a01_verify_20260908_181144.prof
+
+         3940 function calls (3936 primitive calls) in 0.005 seconds
+
+   Ordered by: cumulative time
+   List reduced from 259 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.005    0.005 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\A01_model\verify.py:492(run)
+        6    0.000    0.000    0.002    0.000 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\_logging.py:131(step)
+        1    0.000    0.000    0.001    0.001 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\A01_model\verify.py:417(validate_traceability)
+       23    0.000    0.000    0.001    0.000 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\_perf.py:96(wrapper)
+       23    0.000    0.000    0.001    0.000 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\A01_model\verify.py:143(_synth_by_seed)
+        6    0.000    0.000    0.001    0.000 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\_logging.py:125(_ensure_configured)
+        1    0.000    0.000    0.001    0.001 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\_logging.py:71(configure)
+        1    0.000    0.000    0.001    0.001 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\_logging.py:88(_loguru_configure)
+        1    0.000    0.000    0.001    0.001 E:\python\Python312\Lib\site-packages\loguru\_logger.py:243(add)
+        2    0.000    0.000    0.001    0.001 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\A01_model\verify.py:212(batch_synth)
+        2    0.000    0.000    0.001    0.001 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\_perf.py:39(synth_batch)
+        1    0.000    0.000    0.001    0.001 E:\python\Python312\Lib\site-packages\loguru\_better_exceptions.py:143(__init__)
+        1    0.000    0.000    0.001    0.001 E:\python\Python312\Lib\site-packages\loguru\_better_exceptions.py:169(_get_lib_dirs)
+       36    0.000    0.000    0.001    0.000 E:\python\Python312\Lib\sysconfig.py:636(get_path)
+       36    0.000    0.000    0.001    0.000 E:\python\Python312\Lib\sysconfig.py:624(get_paths)
+       36    0.000    0.000    0.001    0.000 E:\python\Python312\Lib\sysconfig.py:271(_expand_vars)
+       25    0.000    0.000    0.001    0.000 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\A01_model\verify.py:156(synth_beta_profile)
+        6    0.000    0.000    0.001    0.000 C:\Users\小冰\Desktop\宇宙\.trae\skills\aiq-geometric-forensics\params\_logging.py:190(_emit)
+        6    0.000    0.000    0.001    0.000 E:\python\Python312\Lib\site-packages\loguru\_logger.py:2076(info)
+        6    0.000    0.000    0.001    0.000 E:\python\Python312\Lib\site-packages\loguru\_logger.py:1931(_log)
+
+

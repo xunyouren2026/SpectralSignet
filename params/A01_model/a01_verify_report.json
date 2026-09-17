@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "n_items": 6,
+  "exit_code": 0,
+  "items": [
+    {
+      "step_id": 1,
+      "name": "parse",
+      "status": "PASS",
+      "details": "Qwen2.5-0.5B-Instruct -> qwen/instruct dtype=float32 seed=0 n_layers=24; gpt2-124m -> gpt2 n_layers=12"
+    },
+    {
+      "step_id": 2,
+      "name": "reproducibility",
+      "status": "PASS",
+      "details": "seed=0 两次指纹逐元素相等 = True"
+    },
+    {
+      "step_id": 3,
+      "name": "sft_invariance",
+      "status": "PASS",
+      "details": "corr = 1.0000 (实测 0.9999, 要求 >0.99); 中层β = 0.652 > 浅层 0.250 / 深层 0.413"
+    },
+    {
+      "step_id": 4,
+      "name": "family_separation",
+      "status": "PASS",
+      "details": "within(base↔instruct)=0.0121, cross(Qwen↔GPT-2)=0.9714, 分离比=80.41 (实测 7×, 要求 >2.0)"
+    },
+    {
+      "step_id": 5,
+      "name": "traceability",
+      "status": "PASS",
+      "details": "acc = 100.0% (21/21) (实测 100%)"
+    },
+    {
+      "step_id": 6,
+      "name": "real_model",
+      "status": "PASS",
+      "details": "[真实实测] 真实架构 24L / 2KV / 64hd / hidden=896（与解析 cfg n_layers=24 一致）; decode tok/s=7.20 vs 文档 8.39; k_proj Gamma=0.4695 vs 文档 0.625"
+    }
+  ]
+}

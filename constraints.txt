@@ -1,0 +1,9 @@
+# aiq-geometric-forensics 依赖版本锁定（constraints）
+# 用法：pip install -c constraints.txt -r requirements.txt
+# 说明：锁定经 CI 验证的已知稳定版本，保证可复现；升级需改此文件并重跑 CI。
+numpy==1.26.4
+
+# --- 可选测量引擎（仅离线实测模型时需要）---
+# torch==2.4.0
+# transformers==4.44.2
+# psutil==5.9.8

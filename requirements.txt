@@ -1,0 +1,9 @@
+# aiq-geometric-forensics 运行时依赖
+# 核心（健康/溯源/对比/报告）仅需 numpy。
+# 真实模型测量（measure）额外需 torch + transformers + psutil（见下一段，可选手动安装）。
+numpy>=1.21
+
+# --- 可选：真实模型测量引擎开放（离线 HF 模型目录）---
+# torch>=2.0
+# transformers>=4.30
+# psutil>=5.9

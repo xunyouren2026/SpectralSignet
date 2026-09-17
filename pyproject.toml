@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiq-geometric-forensics"
+version = "3.3.0"
+description = "AI 几何指纹诊断包：健康度（AIQ+Gamma+曲率）/ 家族溯源 / 基准对比 / 真实测量"
+readme = "SKILL.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.21",
+]
+
+[project.optional-dependencies]
+measure = ["torch>=2.0", "transformers>=4.30", "psutil>=5.9"]
+
+[tool.setuptools]
+packages = ["modules"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = [
+    "E501",   # 可读性长行不强制折行
+    "UP009",  # 全项目约定保留 # -*- coding: utf-8 -*- 编码头（Windows 兼容）
+]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_redundant_casts = true
+show_error_codes = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# tests/params 的性能基准用例使用 bench_* 命名（与 pytest-benchmark 约定一致）
+python_functions = ["test_*", "bench_*"]
+
+[tool.coverage.run]
+# 真实模型测量引擎依赖 torch/transformers（可选 extras measure），
+# 测试环境未安装且不在共享基建测试范围；从覆盖率统计中排除。
+omit = ["params/_real_model_harness.py"]
